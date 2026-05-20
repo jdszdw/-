@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">霓虹贪吃蛇分享预览</title>
+  <desc id="desc">霓虹风格的网页版贪吃蛇小游戏分享封面</desc>
+  <defs>
+    <radialGradient id="aura" cx="24%" cy="18%" r="68%">
+      <stop stop-color="#54f4ff" stop-opacity=".35" />
+      <stop offset=".56" stop-color="#091018" />
+      <stop offset="1" stop-color="#05080d" />
+    </radialGradient>
+    <linearGradient id="snake" x1="198" x2="904" y1="432" y2="142" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#54f4ff" />
+      <stop offset="1" stop-color="#8cff9d" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-60%" width="140%" height="220%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0v48" fill="none" stroke="#ffffff" stroke-opacity=".06" />
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#aura)" />
+  <rect width="1200" height="630" fill="url(#grid)" />
+  <text x="96" y="192" fill="#ecfbff" font-family="Georgia, 'Times New Roman', serif" font-size="108" font-weight="700">
+    霓虹贪吃蛇
+  </text>
+  <text x="104" y="256" fill="#9eb6c4" font-family="'Trebuchet MS', sans-serif" font-size="34">
+    Snake Arcade · 点开就能玩的网页小游戏
+  </text>
+  <path
+    d="M190 440c0-74 58-132 132-132h235c50 0 88-38 88-88s-38-88-88-88h-99"
+    fill="none"
+    stroke="url(#snake)"
+    stroke-linecap="round"
+    stroke-width="58"
+    filter="url(#glow)"
+  />
+  <circle cx="548" cy="132" r="10" fill="#091018" />
+  <circle cx="902" cy="372" r="48" fill="#ffb84d" filter="url(#glow)" />
+  <text x="104" y="540" fill="#8cff9d" font-family="'Trebuchet MS', sans-serif" font-size="30" font-weight="700">
+    方向键 / WASD / 手机触屏控制
+  </text>
+</svg>

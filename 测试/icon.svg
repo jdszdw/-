@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Neon Snake Icon</title>
+  <defs>
+    <linearGradient id="snake" x1="20" x2="108" y1="96" y2="28" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#54f4ff" />
+      <stop offset="1" stop-color="#8cff9d" />
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="#091018" />
+  <path
+    d="M30 76c0-17 13-30 30-30h27c8 0 14-6 14-14s-6-14-14-14H59"
+    fill="none"
+    stroke="url(#snake)"
+    stroke-linecap="round"
+    stroke-width="18"
+    filter="url(#glow)"
+  />
+  <circle cx="88" cy="18" r="4" fill="#091018" />
+  <circle cx="106" cy="78" r="10" fill="#ffb84d" filter="url(#glow)" />
+</svg>

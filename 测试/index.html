@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>霓虹贪吃蛇</title>
+    <meta
+      name="description"
+      content="一款霓虹风格的网页版贪吃蛇小游戏，支持键盘和手机触屏操作。"
+    />
+    <meta name="theme-color" content="#091018" />
+    <meta property="og:title" content="霓虹贪吃蛇" />
+    <meta
+      property="og:description"
+      content="来挑战这款霓虹风贪吃蛇小游戏，看看你能拿多少分。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="preview.svg" />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="hero">
+        <p class="eyebrow">Snake Arcade</p>
+        <h1>霓虹贪吃蛇</h1>
+        <p class="intro">
+          吃掉能量点，别撞墙，也别咬到自己。大号 ×2 果子会让蛇身长度翻倍。
+          方向键或 WASD 控制，空格暂停。
+        </p>
+      </section>
+
+      <section class="panel" aria-label="贪吃蛇游戏">
+        <div class="scoreboard">
+          <div>
+            <span>当前分数</span>
+            <strong id="score">0</strong>
+          </div>
+          <div>
+            <span>最高分</span>
+            <strong id="bestScore">0</strong>
+          </div>
+        </div>
+
+        <div class="board-wrap">
+          <canvas id="gameCanvas" width="560" height="560" aria-label="游戏画布"></canvas>
+          <div id="message" class="message">
+            <strong>准备开始</strong>
+            <span>点击开始，或者按 Enter</span>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="startButton" type="button">开始游戏</button>
+          <button id="pauseButton" type="button">暂停</button>
+          <button id="restartButton" type="button">重新开始</button>
+          <button id="shareButton" type="button">分享链接</button>
+        </div>
+        <p id="shareStatus" class="share-status" role="status" aria-live="polite"></p>
+
+        <div class="touch-pad" aria-label="触屏方向控制">
+          <button type="button" data-direction="up">上</button>
+          <button type="button" data-direction="left">左</button>
+          <button type="button" data-direction="right">右</button>
+          <button type="button" data-direction="down">下</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
